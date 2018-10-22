@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: react-front-2
+  labels:
+    app: react-front
+spec:
+  containers:
+    - image: aurelius0523/react-front
+      name: react-front
+      ports:
+        - containerPort: 80

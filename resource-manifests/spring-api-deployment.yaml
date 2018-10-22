@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: spring-api
+spec:
+  replicas: 2
+  minReadySeconds: 15 #The number of seconds to live when old pods are killed off when deploying new pods
+  strategy:
+    type: RollingUpdate #Incremental update that replaces your pods one by one
+    rollingUpdate:
+      maxUnavailable: 1 #The maximum number of pods not available when redeploying
+      maxSurge: 1 #Maximum number of extra pods that can be created when deploying
+  template: #Pod definition
+    metadata:
+      labels: #Used by load balancer to target pods
+        app: spring-api
+    spec:
+      containers:
+        - image: aurelius0523/spring-api
+          imagePullPolicy: Always
+          name: spring-api
+          ports:
+            - containerPort: 80 #Just to tell which port are the containers listening on. For readability only
