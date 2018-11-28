@@ -1,10 +1,20 @@
 package com.aurelius.spring.facade.model;
 
+import java.time.LocalDate;
+
 public class PersonModel {
     private String id;
     private String name;
-    private boolean isMock;
+    private LocalDate birthDate;
     private TodoModel firstTodo;
+
+    public LocalDate getBirthDate() {
+	return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+	this.birthDate = birthDate;
+    }
 
     public TodoModel getFirstTodo() {
 	return firstTodo;
@@ -28,13 +38,5 @@ public class PersonModel {
 
     public void setName(String name) {
 	this.name = name;
-    }
-
-    public boolean isMock() {
-	return isMock;
-    }
-
-    public void setMock(boolean isMock) {
-	this.isMock = isMock;
     }
 }

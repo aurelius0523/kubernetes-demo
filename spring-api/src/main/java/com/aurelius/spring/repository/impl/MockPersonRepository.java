@@ -67,7 +67,6 @@ public class MockPersonRepository implements PersonRepository {
     public Optional<Person> findById(String arg0) {
 	Person person = new Person();
 	person.setId("111");
-	person.setMock(true);
 	person.setName("fake person 111");
 	person.setBirthDate(LocalDate.now());
 	return Optional.of(person);

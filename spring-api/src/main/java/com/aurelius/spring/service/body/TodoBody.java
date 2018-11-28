@@ -1,7 +1,5 @@
 package com.aurelius.spring.service.body;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 public class TodoBody {
     private String userId;
     private String id;

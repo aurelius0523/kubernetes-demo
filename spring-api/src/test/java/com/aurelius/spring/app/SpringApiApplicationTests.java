@@ -1,4 +1,4 @@
-package com.aurelius.spring.api;
+package com.aurelius.spring.app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

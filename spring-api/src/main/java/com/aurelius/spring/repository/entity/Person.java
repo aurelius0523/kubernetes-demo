@@ -3,10 +3,7 @@ package com.aurelius.spring.repository.entity;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Person {
@@ -14,15 +11,6 @@ public class Person {
     private String id;
     private String name;
     private LocalDate birthDate;
-    private boolean isMock;
-
-    public boolean isMock() {
-	return isMock;
-    }
-
-    public void setMock(boolean isMock) {
-	this.isMock = isMock;
-    }
 
     public String getId() {
 	return id;

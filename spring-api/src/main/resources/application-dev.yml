@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: facade-mock, service-mock, repository-mock
+    active:
   h2:
     console:
       enabled: true
